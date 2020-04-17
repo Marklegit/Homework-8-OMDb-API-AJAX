@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+    
+    <!-- Body font -->
+    
+    
+    <!-- data titles-->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css">
+    <title>OMDb API App</title>
+</head>
+
+<body>
+<div id="main_content">
+	<h2>OMDb <span>API</span> App</h2>
+	<h3>The Open Movie Database</h3>
+	<p class="about_api">Infomation about movies! Search your favorite movie to get the director/s, writer/s, genre/s, and plot. Try it!</p>
+		<input type="text" id="movie" placeholder="Seach movie" autocomplete="off">
+	<div id="container">
+		<h1 id="movie-title">Movie Title</h1>
+		<img id="poster">
+		<p>Director/s: <span id="director"></span></p>
+		<p>Writer/s: <span id="writer"></span></p>
+		<p>Genre: <span id="genre"></span></p>
+		<p>Plot: <span id="plot"></span></p>
+		<button id="btn">Get Movie Info</button>
+	</div>
+</div>	
+<script src="scripts/js/main.js"></script>
+</body>
+
+</html>

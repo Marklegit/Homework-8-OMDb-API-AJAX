@@ -1,0 +1,102 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+html{
+	font-size: 14px;
+}
+/*
+body{
+
+}
+*/
+h1{
+	font-family: 'Bevan', cursive;
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+	font-size: 3rem;
+}
+h2{
+	margin: 10px 0px 10px;
+	font-size: 3rem;
+}
+h3{
+	color: #595959;
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+h2 span{
+	color: red;
+	font-style: italic;
+}
+img{
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 10px;
+}
+.about_api{
+	color: black;
+	border: 0px;
+	font-weight: 400;
+}
+p{
+	/*font-family: 'Special Elite', cursive;*/
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	color: black;
+	font-weight: 800;
+	border-bottom: 1px solid black;
+}
+p span{
+	font-family: "helvetica";
+	font-size: 1.3rem;
+	color: black;
+	font-weight: normal;
+}
+#main_content{
+	padding: 10px;
+}
+#container{
+	padding: 10px;
+	/*background-color: #fcba03;
+	background-color: gainsboro;*/
+}
+button{
+	font-size: 1.2rem;
+	padding: 10px;
+	color: white;
+	background-color: /* dodgerblue */#07aaf0;
+	border: 0px;
+	outline: none;
+}
+button:hover{
+	cursor: pointer;
+	background-color: /* royalblue */#049ee0;
+	transition: .1s ease-in-out all;
+}
+input{
+	font-size: 1.5rem;
+	padding: 10px;
+	width: 100%;
+	border: 0px;
+	background-color: black;
+	color: white;
+}
+/*
+input::placeholder{
+	color: white;
+}
+*/
+
+/* DESKTOP DEVICES */
+@media screen and (min-width: 1024px) {	
+	#main_content{
+		width: 800px;
+		margin: auto;
+	}
+}
