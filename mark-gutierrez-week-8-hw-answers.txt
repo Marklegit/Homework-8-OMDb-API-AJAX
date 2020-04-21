@@ -1,85 +1,85 @@
-Mark Gutiérrez Week 8 Homework part 2
+Mark Gutiérrez Week 8 Homework part 2 
 
 1. What does AJAX stand for?
-AJAX stands for Asynchronous JavaScript and XML.
+AJAX stands for Asynchronous JavaScript and XML. 
 
-2. What does XML stand for?
-XML stands for eXtensible Markup Language.
+2. What does XML stand for? 
+XML stands for eXtensible Markup Language. 
 
-3. What object does AJAX use to request data from the server?
-AJAX uses the built-in browser object called XMLHttpsrequest to request data from the server.
+3. What object does AJAX use to request data from the server? 
+AJAX uses the built-in browser object called XMLHttpRequest() to request data from the server. 
 
-4. What is the special feature of AJAX that makes developers like to work with it? Hint: It has to do with enhancing the User Experience (UX).
-AJAX allows the web page to make changes asynchonously, meaning it can update parts of the website without realoding the whole page. This is possible because AJAX exchanges data with the server behind the scenes. This is amazing for better User Experience (UX). 
+4. What is the special feature of AJAX that makes developers like to work with it? Hint: It has to do with enhancing the User Experience (UX). 
+AJAX allows the web page to make changes asynchronously, meaning it can update parts of the website without reloading the whole page. This is possible because AJAX exchanges data with the server behind the scenes. This better User Experience (UX). 
 
-5. Explain the basic five steps involved in the execution of an AJAX XMLHttpRequest between the browser and the server.
-1. An event can occur on the page when the page is loaded or when a button is clicked.
-2. An XMLHttpRequest object sends a request to the server.
-3. The server sends a response back to the web page that made the request.
-4. The response is read by JavaScript.
-5. JavasScript executes the page update.
+5. Explain the basic five steps involved in the execution of an AJAX XMLHttpRequest() between the browser and the server. 
+1. An event can occur on the web page when the page is loaded or when a button is clicked. 
+2. An XMLHttpRequest() object sends a request to the server. 
+3. The server sends back a response to the web page that made the request. 
+4. The response is read by JavaScript. 
+5. JavaScript executes the page update. 
 
-6. What makes up the core of AJAX?
-The XMLHttpRequest object makes the core of AJAX.
+6. What makes up the core of AJAX? 
+The XMLHttpRequest() object makes the core of AJAX. 
 
-7. What is the XMLHttpRequest Object used for?
-The XMLHttpRequest object is used to exchange data with a web server asynchronously.
+7. What is the XMLHttpRequest() Object used for? 
+The XMLHttpRequest object is used to exchange data with a web server asynchronously.   
 
-8. What is the syntax for XMLHttpRequest()?
-Syntax:
-variable = new XMLhttpRequest();
+8. What is the syntax for XMLHttpRequest()? 
+Syntax: 
+variable = new XMLhttpRequest(); 
 
-9. Give me an example of XMLHttpRequest(). Use your project code please.
-code example from my project:
-const xhttps = new XMLHttpsRequest();
+9. Give me an example of XMLHttpRequest(). Use your project code please. 
+code example from my project: 
+const xhttps = new XMLHttpRequest(); 
 
-10. What must be called before any other method calls and why?
-The XMLHttpRequest() constructor initializes an XMLHttpRequest object. It must be called before any other method calls.
+10. What must be called before any other method calls and why? 
+The XMLHttpRequest() constructor initializes an XMLHttpRequest() object. It must be called before any other method calls.
+  
+11. In the OMDB API project, even though the OMDB API is served over http, we use https. Why?
+On a live server you cannot use http; even if the website is http we use https. 
 
-11. In the OMDB Api project, even though the OMDB Api is served over http, we use https. Why?
-On a liver server you cannot use http; even if the website is http we use https.
+12. What keyword is used to initialize the XMLHttpRequest() object? 
+The keyword is new. 
 
-12. What keyword is used to initialize the XMLHttpRequest object?
-The keyword is new.
+13. What does new XMLHttpRequest() create? 
+It creates an instance of the ArchiveTemp() object using the ArchiveTemp() constructor function. 
 
-13. What does new XMLHttpRequest() create?
-It creates an instance of the ArchiveTemp object using the ArchiveTemp() constructor function.
+14. What are the 5 things that the new keyword does? 
+1. It creates an object from constructor function like XMLHttpRequest(). 
+2. It sets the new object's internal, inaccessible/ private, a property of prototype to constructor function's external; accessible, prototype object. Every object has a prototype property. 
+3. It executes the constructor function, using the newly created object whenever this is mentioned. 
+4. The new keyword makes this keyword point to the newly created object. The constructor function refers to the function that follows the new keyword. 
+5. It returns this if the function does not return its own object. 
 
-14. What are the 5 things that the new keyword does?
-1. It creates an object from constructor function like XMLHttpRequest().
-2. It sets the new object's internal, inaccessible/ private, a property of propotype to constructor function's external; acessible, prototype object. Every object has a prototype property.
-3. It executes the constructor function, using the newly created object whenever this is mentioned.
-4. The new keyword makes this keyword point to the newly created object. The constructor function refers to the function that follows the new keyword.
-5. It returns this if the funtion does not return its own object.
+15. Using code from your project, give me an example of this being returned due to the use of the new keyword with XMLHttpRequest() to create an instance of the XMLHttpRequest() Object. 
+this code example: 
+xhttps.onreadystatechange = function () { 
+        if (this.readyState === 4 && this.status === 200) { 
+            console.log(this.responseText);
+            console.log(JSON.parse(this.responseText));
+            const data = JSON.parse(this.responseText);
+            document.getElementById("movie-title").innerHTML = data.Title;
+            document.getElementById("poster").src = data.Poster;
+            document.getElementById("director").innerHTML = data.Director;
+            document.getElementById("writer").innerHTML = data.Writer; 
+            document.getElementById("genre").innerHTML = data.Genre;
+            document.getElementById("plot").innerHTML = data.Plot;
+        } 
+  
+16. Describe what the XMLHttpRequest.open() method does. 
+XMLHttpRequest.open() initializes a newly-created request or re-initializes an existing one.  
 
-15. Using code from your project, give me an example of this being returned due to the use of the new keyword with XMLHttpRequest() to create an instance of the XMLHttpRequest Object.
-this code example:
-xhttps.onreadystatechange = function () {
-		if (this.readyState === 4 && this.status === 200) {
-			console.log(this.responseText);
-			console.log(JSON.parse(this.responseText));
-			const data = JSON.parse(this.responseText);
-			document.getElementById("movie-title").innerHTML = data.Title;
-			document.getElementById("poster").src = data.Poster;
-			document.getElementById("director").innerHTML = data.Director;
-			document.getElementById("writer").innerHTML = data.Writer;
-			document.getElementById("genre").innerHTML = data.Genre;
-			document.getElementById("plot").innerHTML = data.Plot;
-		}
+17. Using code from your project, give me an example of XMLHttpRequest.open(). 
+XMLHttpRequest.open() code example from my project: 
+xhttps.open("GET", url, true); 
 
-16. Describe what the XMLHttpRequest.open() method does.
-XMLHttpRequest.open() initializes a newly-created request or re-initializes an existing one.
+18. Tell me what the values passed to the XMLHttpRequest.open() method are for, and give me the parameters they represent the values (aka arguments) of. Hint: part of the answer may reside in the slide deck and inside the Related Resources links at the end of the deck, and part will reside in the README.md of the week 8 homework repository. You will have come across the information while reading the instructions for going through the steps of building your project. 
+The values that are passed to the XMLHttpRequest.open() method include the first parameter "method" which can be GET, POST, PUT, or DELETE; this is ignored for non-HTTP(S) URLS. The second parameter is the URL, a DOMString. The third parameter is a Boolean which is true by default, but can be true or false. This Boolean indicates whether to perform the operation asynchronously(true) or synchronous(false). On a side note XMLHttpRequest.send() method does not return until this response is received. If you set it to true or asynchronous the notification of a completed transaction is provided using an event listener. The fourth parameter is user name(optional) which is used for authentication and by default its value is null. The last parameter is password and it's also used for authentication purposes and by default its value is null. 
 
-17. Using code from your project, give me an example of XMLHttpRequest.open().
-XMLHttpRequest.open() code example from my project:
-xhttps.open("GET", url, true);
+19. Using code from your project, give me an example of XMLHttpRequest.send(). 
+code example from my project using XMLHttpRequest.send(): 
+xhttps.send(); 
 
-18. Tell me what the values passed to the open() method are for, and give me the parameters they represent the values (aka arguments) of. Hint: part of the answer may reside in the slide deck and inside the Related Resources links at the end of the deck, and part will reside in the README.md of the week 8 homework repository. You will have come across the information while reading the instructions for going through the steps of building your project.
-The values that are passed to the open() method include the first parameter "method" which can be GET, POST, PUT, or DELETE; this is ignored for non-HTTP(S) URLS. The second parameter is the URL, a DOMString. The third parameter is a boolean which is true by default, but can be true or false. This boolean indicates whether to perform the operation asynchronously(true) or synchronous(false). On a side note XMLHttpRequest.send() method does not return until this response is received. If you set it to true or asynchronous the notification of a completed transaction is provived using an event listener. The fouth parameter is user name(optional) which is used for authentication and by default its value is null. The last parameter is password and it's also used for authentication purposes and by default its value is null.
-
-19. Using code from your project, give me an example of XMLHttpRequest.send().
-code example from my project using XMLHttpRequest.send():
-xhttps.send();
-
-20. Tell me if there are any values passed to our send() method. What optionally could be passed to the method, and why do we NOT have to pass this optional parameter/argument to our send() method?
-We did not used any values in our send() method. You can pass the body(optional) as a parameter. This is used with the method PUT because it modifies the body content. If the request is GET or HEAD it will be ignored and the request body is set to null.
+20. Tell me if there are any values passed to our XMLHttpRequest.send() method. What optionally could be passed to the method, and why do we NOT have to pass this optional parameter/argument to our XMLHttpRequest.send() method?
+We did not used any values in our XMLHttpRequest.send() method. You can pass the body(optional) as a parameter. This is used with the method PUT because it modifies the body content. If the request is GET or HEAD it will be ignored and the request body is set to null.
